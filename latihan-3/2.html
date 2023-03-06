@@ -1,0 +1,67 @@
+
+<html>
+    <head>
+        <title>calculator</title>
+        <style type="text/css"> 
+            body {
+                font-family: Arial, sans-serif;
+                font-size: 16px;
+                line-height: 1.5;
+                padding: 0 20px;
+            }
+            input[type=button]{
+                padding: 5px 15px;
+                margin: 10px 10px;
+                color: white;
+                background-color: rgb(30, 203, 145);
+                border: none;
+            }
+            input[type=button]:hover{
+                color: white;
+                background-color: rgb(33, 158, 116);
+            }
+        </style>
+    </head>
+    <script language="javascript">
+    //<!-fungsi untuk penambahan 
+        function tambah(){
+            var val1=parseInt(document.kalku.N1.value);
+            var val2=parseInt(document.kalku.N2.value);
+            var hasil = val1+val2;
+            document.kalku.H1.value=hasil;
+        }
+    //<!-fungsi untuk pengurangan 
+        function kurang(){
+            var val1=parseInt(document.kalku.N1.value);
+            var val2=parseInt(document.kalku.N2.value);
+            var hasil = val1-val2;
+            document.kalku.H1.value=hasil;
+        }
+    //<!-fungsi untuk perkalihan 
+        function perkalian(){
+            var val1=parseInt(document.kalku.N1.value);
+            var val2=parseInt(document.kalku.N2.value);
+            var hasil = val1*val2;
+            document.kalku.H1.value=hasil;
+        }
+    //<!-fungsi untuk pembagian
+        function pembagian(){
+            var val1=parseInt(document.kalku.N1.value);
+            var val2=parseInt(document.kalku.N2.value);
+            var hasil = val1/val2;
+            document.kalku.H1.value=hasil;
+        }
+    //<!-pencatatan terakhir edit sc
+        document.write("Dimodifikasi terakhir pada" + document.lastModified);
+
+    </script>
+    <body>
+        <h1>Calculator</h1>
+        <form method="post" name="kalku">
+            <p>Bilangan ke-1 = <input type="number" name="N1"> Bilangan ke-2 = <input type="number" name="N2"></p>
+            <h4><input type="button" name="plus" value="+" onclick=tambah()><input type="button" name="minus" value="-" onclick=kurang()><input type="button" name="kali" value="x" onclick=perkalian()><input type="button" value="/" name="bagi" onclick=pembagian()></h4>
+            <p>Hasil Akhir</p>
+            <h3><input type="text" name="H1"></h3>
+        </form>
+    </body>
+</html>
